@@ -1,5 +1,7 @@
 # README
 
+this is the readme for a new application
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
