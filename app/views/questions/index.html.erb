@@ -1,0 +1,23 @@
+<h1>listing all of you asked questions | <%= link_to 'Ask a question', new_question_path %></h1>
+
+
+
+
+<table>
+	<tr>
+		<td class="indexlbl">Title</td>
+		<td class="indexlbl">Body</td>
+	</tr> 
+
+	<% @questions.each do |question| %>
+		<tr>
+			<td><%= question.title %></td>
+			<td><%= question.body %></td>
+			<td><%= link_to 'Show', question_path(question)  %></td>
+			<td><%= link_to "Delete", question_path(question), method: :delete, data: {confirm: "Are you sure?"} %></td>
+			<td><%= link_to "Edit", edit_question_path(question) %></td>
+		</tr>
+	<% end %>
+</table>
+
+	
