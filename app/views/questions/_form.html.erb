@@ -1,16 +1,42 @@
-<%= form_for @question do |t| %>
-	<p>
-		<%= t.label :title %><br>
-		<%= t.text_field :title %>
-	</p>
-	<p>
-		<%= t.label :body %> <br>
-		<%= t.text_area :body %>
-	</p>
 
-	<p>
-		<%= t.submit "Ask question" %>
-	</p>
+<div class="container">
+	
+	<div class="row">
+	<div class="col-xs-12">
+		<%= form_for(@question, :html => {class: "form-horizontal", role: "form"}) do |f| %>
+			<div class="form-group">
+				<div class="control-label col-sm-2">
+					<%= f.label :Title %>
+				</div>
+				<div class="col-sm-8">
+						<%= f.text_field :title, class: "form-control", placeholder: "Be specific" %>
+					</div>
+				</div>
 
+		
+		<div class="row">
+	<div class="col-xs-12">
+			<div class="form-group">
+				<div class="control-label col-sm-2">
+					<%= f.label :body %>
+				</div>
+				<div class="col-sm-8">
+						<%= f.text_area :body, class: "form-control", placeholder: "To show code use a screenshot" %>
+					</div>
+				</div>
 
-<% end %>
+		
+
+		<p>
+			<%= f.submit class: "btn btn-primary", id: "formbtn" %>
+			<%= link_to "cancel", questions_path, class: "btn btn-danger", id: "formcancel" %>
+		
+		</p>
+
+		
+
+	<% end %>
+	
+	</div>
+</div>
+</div>
