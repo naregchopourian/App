@@ -9,6 +9,8 @@ get 'signup', to: 'users#new'
 
 resources :questions
 
+resources :users, except: [:new]
+
 
 
 

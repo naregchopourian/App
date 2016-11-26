@@ -31,7 +31,7 @@ end
 
 	def create 
 		@question = Question.new(question_params)
-		@question.user  = User.first 
+		@question.user = User.last 
 		if @question.save 
 			flash[:success] = "Question was asked"
 			redirect_to question_path(@question)

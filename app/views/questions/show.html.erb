@@ -3,9 +3,10 @@
 
 <div class="container">
 	<h1 class="showh1"><%=  @question.title %></h1>
+	
 	<p class="bodyshow"><%= @question.body %></p>
 	
-	<p class="trash-glyph"><%= link_to '<i class="glyphicon glyphicon-trash"></i>'.html_safe, question_path, method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-danger" %></p>
+	<p class="trash-glyph"><%= link_to '<i class="glyphicon glyphicon-trash"></i>'.html_safe, question_path, method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-danger" %>    <%= link_to '<i class="glyphicon glyphicon-edit"></i>'.html_safe, edit_question_path, class: "btn btn-primary" %></p>
 	
 </div>
 
